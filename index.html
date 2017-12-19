@@ -266,6 +266,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ethanway.github.io/2017/12/19/css3-border-radius属性详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ethan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/19/css3-border-radius属性详解/" itemprop="url">css3 border-radius属性详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T18:39:18+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS3详解"><a href="#CSS3详解" class="headerlink" title="CSS3详解"></a>CSS3详解</h1><p>##CSS3圆角属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-radius</span>: 10<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> 30<span class="selector-tag">px</span> 40<span class="selector-tag">px</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这四个参数分别对应左上，右上，右下，左下四个角的弧度.</p>
+<p>气球CSS设置：160px 160px 64px 160px;</p>
+</blockquote>
+<h2 id="CSS3旋转"><a href="#CSS3旋转" class="headerlink" title="CSS3旋转"></a>CSS3旋转</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">rotate</span>(45<span class="selector-tag">deg</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>顺时针旋转45°.</p>
+</blockquote>
+<h2 id="CSS3盒子阴影"><a href="#CSS3盒子阴影" class="headerlink" title="CSS3盒子阴影"></a>CSS3盒子阴影</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow 0 0 65px 20px #ffffff inset|outset;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>设置阴影：外阴影，内阴影.</p>
+</blockquote>
+<ul>
+<li>参数1：影子的x坐标</li>
+<li>参数2：影子的y坐标</li>
+<li>参数3：影子的模糊程度</li>
+<li>参数4：影子的粗细</li>
+<li>参数5：影子的颜色</li>
+<li>参数6：内阴影还是外阴影.</li>
+</ul>
+<h2 id="CSS3伪元素"><a href="#CSS3伪元素" class="headerlink" title="CSS3伪元素"></a>CSS3伪元素</h2><blockquote>
+<p>after before</p>
+<p>伪元素区别与伪类</p>
+<p>伪类：不添加标签</p>
+<p>伪元素：真真实实的添加了一个标签.</p>
+</blockquote>
+<ul>
+<li>使用content激活伪元素</li>
+<li>伪元素默认为行内样式，width和height无法改变其大小.，需要使用display:block.设置其为块样式.</li>
+</ul>
+<h2 id="CSS3三角形"><a href="#CSS3三角形" class="headerlink" title="CSS3三角形"></a>CSS3三角形</h2><ul>
+<li>设置四个宽边框，把其他三个角设置为透明色，transparent，只设置当前角的颜色. </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ethanway.github.io/2017/12/19/JQueryDOM操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -337,10 +491,62 @@
       
         
           
-            <h2 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h2><blockquote>
+            <p>[TOC]</p>
+<p>#节点操作</p>
+<h2 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h2><blockquote>
 <p>查找属性节点：通过JQuery选择器完成.<br>查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.<br>操作文本节点: 通过text().<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).text(<span class="string">"Ethan"</span>);</span><br><span class="line">$(<span class="string">"p"</span>).attr(<span class="string">"user"</span>, <span class="string">"1779956562"</span>)</span><br><span class="line">alert($(<span class="string">"p"</span>).attr(<span class="string">"user"</span>));</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><h2 id="插入节点"><a href="#插入节点" class="headerlink" title="插入节点"></a>插入节点</h2>
+<h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><blockquote>
+<p> 使用JQuery的工厂函数$(): #(html); 会根据传入的html标记字符串创建一个DOM对象，并把这个DOM包装成一个JQuery对象返回.</p>
+</blockquote>
+<ul>
+<li>动态创建的新元素节点不会被自动添加到文档中，而是需要使用其他方法将其插入到文档中;</li>
+<li>当创建单个元素时，需<strong>注意闭合标签使用标准的XHTML格式</strong>，例如创建一个p元素，可以使用(“<p>“)或$(“</p><p></p>“)，必须要加上闭合符号.</li>
+<li>创建文本节点就是<p>fsdf</p>，创建属性节点同上<p id="10"></p>.</li>
+</ul>
+<h2 id="插入节点"><a href="#插入节点" class="headerlink" title="插入节点"></a>插入节点</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td>向每个匹配的元素的内部的结尾处追加内容</td>
+</tr>
+<tr>
+<td>appendTo</td>
+<td>将每个匹配的元素追加到指定的元素内部的结尾处.</td>
+</tr>
+<tr>
+<td>prepend</td>
+<td>向每个匹配元素的内部的开始处插入内容.</td>
+</tr>
+<tr>
+<td>prependTo</td>
+<td>将每个匹配的元素插入到指定的元素内部的开始处</td>
+</tr>
+<tr>
+<td>after</td>
+<td>当前元素插入到指定元素后面</td>
+</tr>
+<tr>
+<td>insertafter</td>
+<td>当前元素的后面插入指定元素</td>
+</tr>
+<tr>
+<td>befor</td>
+<td>前面</td>
+</tr>
+<tr>
+<td>insertbefor</td>
+<td>前面</td>
+</tr>
+</tbody>
+</table>
+
           
         
       
@@ -776,7 +982,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

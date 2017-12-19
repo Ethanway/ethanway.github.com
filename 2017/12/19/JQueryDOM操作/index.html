@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="查找节点 查找属性节点：通过JQuery选择器完成.查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.操作文本节点: 通过text().123$(&quot;p&quot;).text(&quot;Ethan&quot;);$(&quot;p&quot;).attr(&quot;user&quot;, &quot;1779956562&quot;)alert($(&quot;p&quot;).attr(&quot;user&quot;));  创建节点插入节点">
+<meta name="description" content="[TOC] #节点操作 查找节点 查找属性节点：通过JQuery选择器完成.查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.操作文本节点: 通过text().123$(&quot;p&quot;).text(&quot;Ethan&quot;);$(&quot;p&quot;).attr(&quot;user&quot;, &quot;1779956562&quot;)alert($(&quot;p&quot;).attr(&quot;user&quot;));  创建节点  使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JQueryDOM操作">
 <meta property="og:url" content="https://ethanway.github.io/2017/12/19/JQueryDOM操作/index.html">
 <meta property="og:site_name" content="我的小窝">
-<meta property="og:description" content="查找节点 查找属性节点：通过JQuery选择器完成.查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.操作文本节点: 通过text().123$(&quot;p&quot;).text(&quot;Ethan&quot;);$(&quot;p&quot;).attr(&quot;user&quot;, &quot;1779956562&quot;)alert($(&quot;p&quot;).attr(&quot;user&quot;));  创建节点插入节点">
+<meta property="og:description" content="[TOC] #节点操作 查找节点 查找属性节点：通过JQuery选择器完成.查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.操作文本节点: 通过text().123$(&quot;p&quot;).text(&quot;Ethan&quot;);$(&quot;p&quot;).attr(&quot;user&quot;, &quot;1779956562&quot;)alert($(&quot;p&quot;).attr(&quot;user&quot;));  创建节点  使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-19T08:51:43.286Z">
+<meta property="og:updated_time" content="2017-12-19T10:23:00.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQueryDOM操作">
-<meta name="twitter:description" content="查找节点 查找属性节点：通过JQuery选择器完成.查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.操作文本节点: 通过text().123$(&quot;p&quot;).text(&quot;Ethan&quot;);$(&quot;p&quot;).attr(&quot;user&quot;, &quot;1779956562&quot;)alert($(&quot;p&quot;).attr(&quot;user&quot;));  创建节点插入节点">
+<meta name="twitter:description" content="[TOC] #节点操作 查找节点 查找属性节点：通过JQuery选择器完成.查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.操作文本节点: 通过text().123$(&quot;p&quot;).text(&quot;Ethan&quot;);$(&quot;p&quot;).attr(&quot;user&quot;, &quot;1779956562&quot;)alert($(&quot;p&quot;).attr(&quot;user&quot;));  创建节点  使用">
 
 
 
@@ -333,10 +333,62 @@
       
 
       
-        <h2 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h2><blockquote>
+        <p>[TOC]</p>
+<p>#节点操作</p>
+<h2 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h2><blockquote>
 <p>查找属性节点：通过JQuery选择器完成.<br>查找属性节点：查找到所需要的元素之后，可以调用JQuery对象的attr()方法来获取它的各种属性值.<br>操作文本节点: 通过text().<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).text(<span class="string">"Ethan"</span>);</span><br><span class="line">$(<span class="string">"p"</span>).attr(<span class="string">"user"</span>, <span class="string">"1779956562"</span>)</span><br><span class="line">alert($(<span class="string">"p"</span>).attr(<span class="string">"user"</span>));</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><h2 id="插入节点"><a href="#插入节点" class="headerlink" title="插入节点"></a>插入节点</h2>
+<h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><blockquote>
+<p> 使用JQuery的工厂函数$(): #(html); 会根据传入的html标记字符串创建一个DOM对象，并把这个DOM包装成一个JQuery对象返回.</p>
+</blockquote>
+<ul>
+<li>动态创建的新元素节点不会被自动添加到文档中，而是需要使用其他方法将其插入到文档中;</li>
+<li>当创建单个元素时，需<strong>注意闭合标签使用标准的XHTML格式</strong>，例如创建一个p元素，可以使用(“<p>“)或$(“</p><p></p>“)，必须要加上闭合符号.</li>
+<li>创建文本节点就是<p>fsdf</p>，创建属性节点同上<p id="10"></p>.</li>
+</ul>
+<h2 id="插入节点"><a href="#插入节点" class="headerlink" title="插入节点"></a>插入节点</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>append</td>
+<td>向每个匹配的元素的内部的结尾处追加内容</td>
+</tr>
+<tr>
+<td>appendTo</td>
+<td>将每个匹配的元素追加到指定的元素内部的结尾处.</td>
+</tr>
+<tr>
+<td>prepend</td>
+<td>向每个匹配元素的内部的开始处插入内容.</td>
+</tr>
+<tr>
+<td>prependTo</td>
+<td>将每个匹配的元素插入到指定的元素内部的开始处</td>
+</tr>
+<tr>
+<td>after</td>
+<td>当前元素插入到指定元素后面</td>
+</tr>
+<tr>
+<td>insertafter</td>
+<td>当前元素的后面插入指定元素</td>
+</tr>
+<tr>
+<td>befor</td>
+<td>前面</td>
+</tr>
+<tr>
+<td>insertbefor</td>
+<td>前面</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
@@ -369,6 +421,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/19/css3-border-radius属性详解/" rel="prev" title="css3 border-radius属性详解">
+                css3 border-radius属性详解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -445,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
