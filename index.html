@@ -266,6 +266,337 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ethanway.github.io/2017/12/20/DTD可以限制XML啥？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ethan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/20/DTD可以限制XML啥？/" itemprop="url">DTD可以限制XML啥？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T09:43:18+08:00">
+                2017-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="DTD"><a href="#DTD" class="headerlink" title="DTD"></a>DTD</h1><h2 id="DTD语法"><a href="#DTD语法" class="headerlink" title="DTD语法"></a>DTD语法</h2><ul>
+<li>&lt;!ELEMENT 元素名称 约束&gt;</li>
+</ul>
+<p>dtd: 复杂元素：有子标签&lt;!ELEMENT person(name, age)&gt;，简单元素：没子标签&lt;!ELEMENT name(#PCDATA)</p>
+<p>###约束类型：</p>
+<p>PCDATA: 字符串类型<br>EMPTY: 空类型<br>ANY: 任何类型</p>
+<p>###表示子元素出现的次数：</p>
+<p>+: 一次或多次<br>?: 零次或一次<br>*: 零次或多次</p>
+<p>###表示子元素的顺序：</p>
+<p>,: 遵守孙旭<br>|：无序</p>
+<p>###元素属性：</p>
+<p>CDATA: 字符串类型<br>枚举：只能在一定的范围内出现值，每次只能出现一个(aa|bb|cc)<br>ID：值只能是字母或下划线开头</p>
+<p>###元素属性约束：</p>
+<p>井EQUIRED: 必须的</p>
+<p>井IMPLIED: 可有可无</p>
+<p>井FIXED: 取值为一个固定值</p>
+<p>###定义实体：</p>
+<p>!ENTITY TEST “HAHA”<br>&TEST; //使用实体</p>
+<h3 id="CDATA消除义"><a href="#CDATA消除义" class="headerlink" title="CDATA消除义"></a>CDATA消除义</h3><p>使用&lt;![CDTA[str]]不转义特殊字符.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ethanway.github.io/2017/12/20/schema是什么东东？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ethan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/20/schema是什么东东？/" itemprop="url">schema是什么东东？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T09:32:22+08:00">
+                2017-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="XML-Schema"><a href="#XML-Schema" class="headerlink" title="XML Schema"></a>XML Schema</h1><p>###创建一个Schama文件</p>
+<blockquote>
+<p>Schama就是一个XML文件，后缀名是<strong>xsd</strong>.</p>
+<p>根节点：<schema></schema></p>
+</blockquote>
+<p>####节点属性：</p>
+<ul>
+<li>xmlns=”<a href="http://www.w3.org/2001/XMLSchema" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema</a>“ 表示他是约束文档.</li>
+<li>targetNamespace=”ethanway.github.io” 直接通过这个地址引入约束文件，一般用url地址来表示.保证没有重复的.</li>
+<li>elementFormDefault=”qualified”  qualified：质量良好的</li>
+</ul>
+<p>####元素类型：</p>
+<blockquote>
+<p>通过element标签里的type属性设置.<br>int string </p>
+</blockquote>
+<p>####复杂元素定义：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">complexType</span>&gt;</span><span class="tag">&lt;<span class="name">sequence</span>&gt;</span>子元素<span class="tag">&lt;/<span class="name">sequence</span>&gt;</span><span class="tag">&lt;/<span class="name">complexType</span>&gt;</span><span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><sequence>表示元素是有顺序的.</sequence></li>
+<li><all>只能出现一次.</all></li>
+<li><choice>只能出现其中的一个，多选1</choice></li>
+<li><any>表示任意元素</any></li>
+<li>element元素属性<strong>maxOccurs=”unbounded”</strong>设置该元素无限制使用.</li>
+</ul>
+<p>#####定义属性：只能为复杂元素<br>···html</p>
+<p><attribute name="id1" type="int" use="required"></attribute><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* #####use属性：</span><br><span class="line">* required：必须存在的</span><br><span class="line"></span><br><span class="line">####简单元素定义：</span><br><span class="line"></span><br><span class="line">​```html</span><br><span class="line">&lt;element name=&quot;&quot; type=&quot;&quot;&gt;&lt;/element&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="XML中引入Schema文件"><a href="#XML中引入Schema文件" class="headerlink" title="XML中引入Schema文件."></a>XML中引入Schema文件.</h3><blockquote>
+<p>在根标签中添加属性</p>
+</blockquote>
+<ul>
+<li>xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance</a>“ : 表示是一个被约束的文件</li>
+<li>xmlns=”you file namespace” : 你的Schema文件命名空间</li>
+<li>xsI:schemaLocation=”namespace filename” : 你的Schama文件命名空间和路径</li>
+</ul>
+<h4 id="引入多个schama文件，可以给每个起别名。"><a href="#引入多个schama文件，可以给每个起别名。" class="headerlink" title="引入多个schama文件，可以给每个起别名。"></a>引入多个schama文件，可以给每个起别名。</h4><p>想使用哪个schema文件中的元素就使用哪个别名来调用：<dept:name></dept:name></p>
+<p>##DOM解析方式</p>
+<blockquote>
+<p>DOM：根据xml的层级结构在内存中分配一个树形结构.把xml中标签，属性，文本封装成对象.</p>
+</blockquote>
+<p>###获取节点<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</span><br><span class="line"><span class="comment">// 获取DocumentBuilder实例</span></span><br><span class="line">DocumentBuilder db = dbf.newDocumentBuilder();</span><br><span class="line"><span class="comment">// 解析xml文件</span></span><br><span class="line">Document doc = db.parse(<span class="string">"src/person.xml"</span>);</span><br><span class="line">NodeList names = doc.getElementsByTagName(<span class="string">"name"</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; names.getLength(); i++) &#123;</span><br><span class="line">     	<span class="comment">// item选择单个元素</span></span><br><span class="line">	Node name = names.item(i);</span><br><span class="line">	System.out.println(name.getTextContent());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###文档回写<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TransformerFactory tf = TransformerFactory.newInstance();</span><br><span class="line">Transformer t = tf.newTransformer();</span><br><span class="line">t.transform(<span class="keyword">new</span> DOMSource(doc), <span class="keyword">new</span> StreamResult(<span class="string">"src/person.xml"</span>));</span><br></pre></td></tr></table></figure></p>
+<p>###修改节点<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Node sex = document.getElementsByTagName(<span class="string">"sex"</span>).item(<span class="number">0</span>);</span><br><span class="line">sex.setTextContent(<span class="string">"123"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>###删除节点<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 找到sex节点</span></span><br><span class="line">NodeList sexs = document.getElementsByTagName(<span class="string">"sex"</span>);</span><br><span class="line">Node sex = sexs.item(<span class="number">0</span>);</span><br><span class="line"><span class="comment">// 获取父节点</span></span><br><span class="line">Node p1 = sex.getParentNode();</span><br><span class="line">p1.removeChild(sex);</span><br></pre></td></tr></table></figure></p>
+<p>##Sax解析</p>
+<ul>
+<li>解析xml有两种技术，DOM/Sax。</li>
+<li>SAX：事件驱动，边读边解析</li>
+<li>在java.xml.parsers</li>
+<li>SAXParser</li>
+<li>SAXParserFactory</li>
+</ul>
+<p>###Sax解析的过程</p>
+<ol>
+<li>执行<strong>parse(url, 事件处理器)</strong>方法.</li>
+<li>当把事件处理器传递进来，相当于在方法里面绑定了一个事件。</li>
+<li>事件处理器方法：</li>
+<li>自己创建一个类继承DefaultHander 实现》</li>
+<li><ol>
+<li>执行到开始标签自动调用：startElement()</li>
+</ol>
+</li>
+<li><ol>
+<li>执行到文本标签自动调用：characters()</li>
+</ol>
+</li>
+<li><ol>
+<li>执行到结尾标签自动调用：endElement()</li>
+</ol>
+</li>
+</ol>
+<p>###查找节点(只能做查询操作)</p>
+<blockquote>
+<p>SAXParser(url, 事件处理器)</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ethanway.github.io/2017/12/19/我的JavaWeb学习路线/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1112,7 +1443,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
